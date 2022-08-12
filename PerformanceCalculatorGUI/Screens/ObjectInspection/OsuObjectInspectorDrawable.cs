@@ -58,7 +58,10 @@ namespace PerformanceCalculatorGUI.Screens.ObjectInspection
             {
                 panel.AddParagraph($"Strain Time: {entry.DifficultyHitObject.StrainTime:N3}");
                 panel.AddParagraph($"Aim Difficulty: {AimEvaluator.EvaluateDifficultyOf(entry.DifficultyHitObject, true):N3}");
-                panel.AddParagraph($"Speed Difficulty: {SpeedEvaluator.EvaluateDifficultyOf(entry.DifficultyHitObject, 20):N3}"); // OD10, not possible to get difficulty stats from here?
+
+                // TODO: work out how to pass mods into here
+                //panel.AddParagraph($"Speed Difficulty: {SpeedEvaluator.EvaluateDifficultyOf(entry.DifficultyHitObject, 20):N3}"); // OD10, not possible to get difficulty stats from here?
+
                 panel.AddParagraph($"Rhythm Difficulty: {RhythmEvaluator.EvaluateDifficultyOf(entry.DifficultyHitObject, 20):N3}");
                 panel.AddParagraph($"Flashlight Difficulty: {FlashlightEvaluator.EvaluateDifficultyOf(entry.DifficultyHitObject, false):N3}");
 
